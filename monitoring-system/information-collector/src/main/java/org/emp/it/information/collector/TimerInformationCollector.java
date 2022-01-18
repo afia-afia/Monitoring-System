@@ -4,6 +4,8 @@
  */
 package org.emp.it.information.collector;
 
+import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -11,7 +13,18 @@ import java.util.List;
  * @author nabil
  */
 public class TimerInformationCollector {
-    List<String> listOfHosts = new ArratList<>;
+   private  List<String> listOfHoststhis = new ArrayList<>();
+   private final String OIDTIME=""; 
+   private TimerService TimerServiceImplementation;
+    public TimerInformationCollector() {
+        
+    }
+    public Date getTimeFromHosts(List hosts){
+        
+        
+       return null;
+        
+    }
     
     
 }
