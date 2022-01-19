@@ -11,6 +11,6 @@ import java.util.Date;
  * @author nabil
  */
 public interface TimerService {
-    public Date getTimer(String ipAddres , String oid );
+    public String getTimer(String ipAddres , String oid );
     
 }

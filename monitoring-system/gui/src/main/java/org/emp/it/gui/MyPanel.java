@@ -14,19 +14,21 @@ import javax.swing.JComponent;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
+import org.emp.it.information.collector.TimerInformationCollector;
 
 /**
  *
  * @author nabil
  */
 public class MyPanel extends JPanel{
-     
+     private TimerInformationCollector collector  ; 
     private  JTextField state ;
    
     private JButton prev = new JButton("get time");
     private JLabel ip = new JLabel("enter an ip address");
     
-    public MyPanel(){
+    public MyPanel(TimerInformationCollector c){
+        this.collector = c ; 
        
        
         this.setLayout(new GridBagLayout());

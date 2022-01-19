@@ -14,16 +14,16 @@ import java.util.List;
  */
 public class TimerInformationCollector {
    private TimerService timerServiceImplementation ;
-   private  String HoststAdress = "";
-   private final String OIDTIME="1.3.6.1.4.1.171.12.10"; 
+   private  String HoststAdress = "192.168.2.3";
+   private final String OIDTIME="1.3.6.1.2.1.1.5.0"; 
   
     public TimerInformationCollector(TimerService s) {
         this.timerServiceImplementation =s;
     }
-    public Date getTimeFromHosts(List hosts){
+    public String getTimeFromHosts(){
         
-        this.timerServiceImplementation.getTimer(HoststAdress, OIDTIME);
-        return null;
+        return this.timerServiceImplementation.getTimer(this.HoststAdress, OIDTIME);
+        
        
         
     }
