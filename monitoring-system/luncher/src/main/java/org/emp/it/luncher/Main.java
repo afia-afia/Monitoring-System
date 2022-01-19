@@ -5,6 +5,9 @@
 package org.emp.it.luncher;
 
 import org.emp.it.gui.MyFrame;
+import org.emp.it.information.collector.TimerInformationCollector;
+import org.emp.it.information.collector.TimerService;
+import org.emp.it.service.implementaion.TimerServiceImplementaion;
 
 /**
  *
@@ -12,7 +15,9 @@ import org.emp.it.gui.MyFrame;
  */
 public class Main {
     public static void main(String[]args){
-        new MyFrame();
+        TimerService timerService = new TimerServiceImplementaion();
+        TimerInformationCollector collector =  new TimerInformationCollector(timerService);
+        new MyFrame(collector);
         
         
     }

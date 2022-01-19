@@ -12,7 +12,7 @@ import javax.swing.JFrame;
  * @author nabil
  */
 public class MyFrame extends JFrame{
-   
+    private TimerInformationCollecter collecter ;
     public MyFrame(){
         
         this.setTitle("Media Player");

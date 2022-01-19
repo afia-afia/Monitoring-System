@@ -13,18 +13,22 @@ import java.util.List;
  * @author nabil
  */
 public class TimerInformationCollector {
-   private  List<String> listOfHoststhis = new ArrayList<>();
-   private final String OIDTIME=""; 
-   private TimerService TimerServiceImplementation;
-    public TimerInformationCollector() {
-        
+   private TimerService timerServiceImplementation ;
+   private  String HoststAdress = "";
+   private final String OIDTIME="1.3.6.1.4.1.171.12.10"; 
+  
+    public TimerInformationCollector(TimerService s) {
+        this.timerServiceImplementation =s;
     }
     public Date getTimeFromHosts(List hosts){
         
-        
-       return null;
+        this.timerServiceImplementation.getTimer(HoststAdress, OIDTIME);
+        return null;
+       
         
     }
-    
+    public void setHostAdress(String ip){
+        this.HoststAdress = ip ;
+    }
     
 }
