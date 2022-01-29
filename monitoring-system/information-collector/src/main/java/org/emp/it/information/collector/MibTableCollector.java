@@ -13,7 +13,7 @@ import java.util.Map;
 public class MibTableCollector {
     
     MibTableService mibTableService ; 
-    MibRequesterInterface mibRequesterInterface ; 
+    
     
     
     public MibTableCollector(MibTableService s){

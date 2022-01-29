@@ -4,12 +4,12 @@
  */
 package org.emp.it.information.collector;
 
-import java.util.Map;
-
 /**
  *
  * @author nabil
  */
-public interface MibRequesterInterface {
-    public Map <String ,String > getMibTable(String ipAdress);
+public interface DataCollecterService {
+    
+    public String getCorespondantDataFromper(String OID ,String ip );
+    
 }

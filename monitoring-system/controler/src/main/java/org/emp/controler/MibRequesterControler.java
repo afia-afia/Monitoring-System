@@ -4,7 +4,9 @@
  */
 package org.emp.controler;
 
+import java.util.Map;
 import org.emp.it.information.collector.MibRequesterInterface;
+import org.emp.it.information.collector.MibTableCollector;
 
 /**
  *
@@ -12,10 +14,29 @@ import org.emp.it.information.collector.MibRequesterInterface;
  */
 public class MibRequesterControler implements MibRequesterInterface {
     
-    @Override
-    public void getMibTable(String ipAdress) {
-        
-        
+    private MibTableCollector MibTableCollector ; 
+    
+    public MibRequesterControler(MibTableCollector c){
+        this.MibTableCollector = c;
     }
+
+    /**
+     *
+     * @param ipAdress
+     * @return
+     */
+    @Override
+    
+    public Map<String ,String > getMibTable(String ipAdress) {
+         
+         Map<String,String> mibtable  = this.MibTableCollector.collectMibtable(ipAdress);
+      
+         
+         
+         return mibtable ; 
+              
+    }
+    
+    
     
 }

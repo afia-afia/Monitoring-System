@@ -9,5 +9,5 @@ package org.emp.it.information.collector;
  * @author nabil
  */
 public interface DataTypeConverterService {
-   public  
+   
 }
